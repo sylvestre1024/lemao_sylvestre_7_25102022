@@ -4,8 +4,8 @@ import colors from '../../../utils/style/colors'
 
 function Header() {
   return (
-    <div>
-      <div>Header</div>
+    <div>Header
+      <div>Header Logo</div>
       <Navigate />
     </div>
   )

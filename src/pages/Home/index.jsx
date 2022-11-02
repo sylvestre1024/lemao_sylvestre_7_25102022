@@ -7,7 +7,7 @@ function Home() {
   return (
     <div>
       <HeadBand />
-      <div>Page Home</div>
+      <div>&#10097;Page Home</div>
     </div>
   )
 }

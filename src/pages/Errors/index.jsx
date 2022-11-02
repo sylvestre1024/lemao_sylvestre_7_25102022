@@ -4,7 +4,7 @@ import colors from '../../utils/style/colors'
 function Errors() {
   return (
     <div>
-        Page Errors. Il semblerait que la page que vous cherchez n’existe pas
+        &#10097;Page 404
     </div>
   )
 }

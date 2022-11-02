@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
+import Errors from './pages/Errors'
 import Header from './components/Layout/Header'
 import Footer from './components/Layout/Footer'
 import GlobalStyle from './utils/style/GlobalStyle'
@@ -14,10 +15,13 @@ function App() {
         <Header />
         <Switch>
           <Route exact path="/">
-              <Home />
+            <Home />
           </Route>
           <Route path="/about">
-              <About />
+            <About />
+          </Route>
+          <Route path="*">
+            <Errors />
           </Route>
         </Switch>
         <Footer />
