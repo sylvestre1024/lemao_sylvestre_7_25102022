@@ -5,7 +5,8 @@ import { useState } from "react";
 
 function Collapse ({label, description}) {
     const [isHidden, setIsHidden] = useState(true)
-
+//TODO isHidden => isCollapsed
+//TODO variables possibilités
     return (
         <div className="collapse">
             <div className="collapse__header">
