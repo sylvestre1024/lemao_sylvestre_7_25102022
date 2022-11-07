@@ -4,13 +4,14 @@ import HeadBand from '../../components/Layout/HeadBand'
 import Card from '../../components/Layout/Card'
 import colors from '../../utils/style/colors'
 import { StyledLink } from '../../utils/style/Atoms'
+import { Link } from "react-router-dom";
 
 /*
-//FONCTIONNE AVEC UN HOOK EN CHEMIN ABSOLU
+//FONCTIONNE AVEC UN HOOK
 import useFetch from "../../utils/hooks/useFetch";
 function Home () {
-  const {datas, isLoading} = useFetch("./test.json")
-  const lodgingDatas = datas
+  const {datas, isLoading} = useFetch("http://localhost:3000/logements.json")
+  const loadedData = datas
   console.log(datas)
   return (
       <div>
@@ -19,18 +20,13 @@ function Home () {
   )
 }
 */
-
-// UTILISATION DE TECHNIQUE EXTERNE SUR LE WEB
-//FONCTIONNE PAS EN CHEMIN RELATIF
-// avec "./test.json"
-// mais FONCTIONNE
-// avec "https://yesno.wtf/api"
 /*
+// UTILISATION DE TECHNIQUE EXTERNE SUR LE WEB
 const useAnswer = () => {
   const [answer, setAnwser] = useState();
 
   const getAnswer = async () => {
-    const res = await fetch("https://yesno.wtf/api");
+    const res = await fetch("http://localhost:3000/logements.json");
     const answer = await res.json();
     setAnwser(answer);
   };
@@ -48,10 +44,6 @@ function Home() {
 */
 
 // UTILISATION DES COURS OPENCLASSROOMS
-//FONCTIONNE PAS EN CHEMIN RELATIF
-// avec "./test.json"
-// mais FONCTIONNE
-// avec "https://yesno.wtf/api"
 /*
 function Home() {
   const [isDataLoading, setDataLoading] = useState(false)
@@ -62,7 +54,7 @@ function Home() {
     async function fetchProducts() {
       setDataLoading(true)
       try {
-        const response = await fetch("./test.json")
+        const response = await fetch("http://localhost:3000/logements.json")
         const { productsList } = await response.json()
         setProductsList(productsList)
       } catch (err) {
@@ -88,18 +80,34 @@ function Home() {
 }
 */
 
-//FONCTIONNE AVEC UN HOOK EN CHEMIN ABSOLUE
+//FONCTIONNE AVEC UN HOOK
+
 import useFetch from "../../utils/hooks/useFetch";
 
-function Home () {
-  const {datas, isLoading} = useFetch("https://yesno.wtf/api")
-  const lodgingDatas = datas
+function Home() {
+  // valeur null pour se passer d'un paramètre
+  const {datas, isLoading} = useFetch("http://localhost:3000/logements.json")
+  const loadedData = datas
   console.log(datas)
   return (
-      <div>
-        test
-      </div>
+          <div>
+            {isLoading ? (
+                <div></div>
+            ) : (
+                <div>
+                    {loadedData.map((myData) => (
+                        <Link to={`/Product/${myData.id}`} key={myData.id}>
+                            <Card 
+                            title={myData.title} 
+                            picture={myData.pictures[0]} 
+                            />
+                        </Link>
+                    ))}
+                </div>
+            )}
+        </div>
   )
 }
+
 
 export default Home
