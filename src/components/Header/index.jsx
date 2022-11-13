@@ -3,8 +3,6 @@ import Navigate from '../../components/Navigate'
 import LogoRed from '../../images/LogoRed.svg'
 import './styles.css'
 
-// ==============================================================
-
 function Header() {
     return (
         <div className='Header'>

@@ -2,8 +2,6 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './styles.css'
 
-// ==============================================================
-
 const Card = ({ product }) => {
     return (
         <NavLink to={`Product/${product.id}`}>

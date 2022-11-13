@@ -1,76 +1,61 @@
+import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom"
+
 import Header from '../../components/Header'
-import Slideshow from "../../components/Slideshow"
+import Errors from '../Errors'
+import Carousel from '../../components/Carousel'
+
 import Collapse from '../../components/Collapse'
-const productData = require("./logements.json")
+import './styles.css'
 
-// localStorage pour charger dans la Home et récupérer dans la page Product
+function Product({ data }) {
+    const [logement, setLogement] = useState({ tags: [], equipments: [], pictures: [], rating: '', host: { 'name': '', 'picture': '' } })
+    const { id } = useParams()
+    console.log('id provenant du paramètre url :' + id)
+    
+    useEffect(() => {
+      data.map((house) => {
+            if (house.id === id) {
+              setLogement(house)
+            }
+            return null
+        })
+    }, [id])
 
-function getProductWithId (productData, productId) {
-    for (let product of productData) {
-        if (product.id===productId) { 
-            //console.log(product.id, productId, product)
-            return product
-        }
+    // Page 404 cas id est non valide
+    if (!logement.id) {
+      //return < Error />
+      console.log('id non trouvé déclenche une erreur 404')
+    } else {
+      console.log('Yes, id trouvé en correspondance au paramètre URL !')
     }
-}
 
-function Product() {
-  const { productId } = useParams()
-  const product = getProductWithId(productData, productId)
-  console.log(product)
-  return (   
-    <div>
-      <Header />
-      {/*
-            <Slideshow photosArray={product.pictures} />
-            <div>
-              <div>
-                <div>Titre : {product.title}</div>
-                <div>Localisation : {product.location}</div>
-                <ul>
-                  {product.tags.map((tag)=>(
-                      <li key={tag.index}>{tag}</li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <div>
-                  <div>Qui : {product.host.name}</div>
-                  <div><img src={product.host.picture} alt={product.host.name} /></div>
-                </div>
-              </div>
+    return (
+          <main className='logement'>
+            <Header />
+            <div className='carousel-logement'>
+                <Carousel img={logement.pictures} />
             </div>
-            <div>Note : {parseInt(product.rating)}</div>
-            <ul>Equipments :
-              {product.equipments.map((tag)=>(
-                <li key={tag.index}>{tag}</li>
-                    ))}
-            </ul>
-            <ul>
-              {product.pictures.map((tag)=>(
-                <li key={tag.index}>{tag}</li>
-                    ))}
-            </ul>
-      */}
-
+            {/*}
+            <section className='section-global'>
                   <div className='collapse-container'>
                     <Collapse
                         title="Description"
-                        content={product.description}
+                        content={logement.description}
                     />
                     <Collapse
                         title="Equipements"
                         content={
                             <ul>
-                                {product.equipments.map((equipment) =>
+                                {logement.equipments.map((equipment) =>
                                     <li key={equipment}>{equipment}</li>)}
                             </ul>
                         }
                     />
                   </div>
-      
-    </div>
+            </section>
+            */}
+          </main>
     )
 }
 
