@@ -1,22 +1,15 @@
 import { useParams } from "react-router-dom"
+import Header from '../../components/Header'
 import Slideshow from "../../components/Slideshow"
 import Collapse from '../../components/Collapse'
 const productData = require("./logements.json")
-
-/*
-function Product() {
-  return (
-    <div>Page Product</div>
-  )
-}
-*/
 
 // localStorage pour charger dans la Home et récupérer dans la page Product
 
 function getProductWithId (productData, productId) {
     for (let product of productData) {
         if (product.id===productId) { 
-            console.log(product.id, productId, product)
+            //console.log(product.id, productId, product)
             return product
         }
     }
@@ -27,7 +20,9 @@ function Product() {
   const product = getProductWithId(productData, productId)
   console.log(product)
   return (   
-          <div>
+    <div>
+      <Header />
+      {/*
             <Slideshow photosArray={product.pictures} />
             <div>
               <div>
@@ -57,7 +52,25 @@ function Product() {
                 <li key={tag.index}>{tag}</li>
                     ))}
             </ul>
-          </div>
+      */}
+
+                  <div className='collapse-container'>
+                    <Collapse
+                        title="Description"
+                        content={product.description}
+                    />
+                    <Collapse
+                        title="Equipements"
+                        content={
+                            <ul>
+                                {product.equipments.map((equipment) =>
+                                    <li key={equipment}>{equipment}</li>)}
+                            </ul>
+                        }
+                    />
+                  </div>
+      
+    </div>
     )
 }
 
