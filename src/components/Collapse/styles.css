@@ -1,0 +1,96 @@
+
+
+/* STYLE BUTTON */
+.collapse {
+    position: relative;
+    z-index: 900;
+    height: 52px;
+    border-radius: 10px;
+    background-color: #FF6060;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    outline: none;
+}
+
+/* STYLE CONTENT TITLE */
+.collapse-title {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* STYLE CHEVRON */
+.collapse-icon {
+    margin-left: auto;
+    /*transition: transform 0.6s ease;*/
+}
+
+/* ROTATION */
+.rotate {
+    transform: rotate(540deg);
+}
+
+/* STYLE COLLAPSE PANEL */
+.collapse-content {
+    background-color: #f3f3f3;
+    overflow: auto;
+    transition: 0.6s ease;
+    margin-top: -10px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+/* STYLE TEXT */
+.collapse-text {
+    color: #FF6060;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 142.6%;
+    padding: 40px 12px 27px 20px;
+}
+
+.collapse-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+/*********************************/
+/* Collapse spécifique pour page A Propos*/
+
+.about__page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about__page .collapse {
+    width: 91%;
+    height: 47px;
+
+}
+
+.about__page .collapse-title {
+    font-size: 24px;
+}
+
+.about__page .collapse-content {
+    width: 91%;
+
+}
+
+.about__page .collapse-text {
+    font-size: 24px;
+    padding: 37px 27px 19px 18px;
+}
+
+.about__page .collapse-icon {
+    width: 23.86px;
+}
