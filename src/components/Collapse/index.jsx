@@ -10,8 +10,8 @@ function Collapse(props) {
     const content = useRef(null)
 
 
-    // Afin de pouvoir utilisé le composant selon les tailles differentes (CSS)
-    const { size } = props // provenance du composant au dessus (page About ou page Product)
+    // utilisation paramètrée du composant pour des tailles css differentes
+    const { size } = props
     const className = size === 'large' ? 'about__page' : 'logement-page'
 
 
@@ -43,25 +43,3 @@ function Collapse(props) {
 }
 
 export default Collapse
-
-/*
-function Collapse ({label, description}) {
-    const [isHidden, setIsHidden] = useState(true)
-
-    return (
-        <div className="collapse">
-            <div className="collapse__header">
-                <div className="collapse__header__label">{label}</div>
-                {isHidden ? 
-                    (<div onClick={()=>setIsHidden(false)} className="collapse__header__icon">FaAngleDown</div>)
-                    : 
-                    (<div onClick={()=>setIsHidden(true)} className="collapse__header__icon">FaAngleUp</div>)}
-            </div>
-            {!isHidden && 
-            <div className="collapse__description">{description}</div>}
-        </div>
-    )
-}
-
-export default Collapse 
-*/

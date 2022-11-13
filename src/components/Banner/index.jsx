@@ -2,8 +2,6 @@ import React from 'react'
 import './styles.css'
 import Background from '../../images/Banner.webp'
 
-// ==============================================================
-
 function Banner() {
     return (
         <div className='banner'>

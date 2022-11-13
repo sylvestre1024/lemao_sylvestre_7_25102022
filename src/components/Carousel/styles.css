@@ -1,0 +1,44 @@
+.carousel {
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    max-width: 1240px;
+    width: 95%;
+    margin-top: 20px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform .5s ease;
+}
+
+.carousel-container-img {
+    flex-shrink: 0;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    width: calc(100% - 20px);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.chevron {
+    width: 30px !important;
+    height: auto !important;
+    cursor: pointer;
+}
+
+.carousel-idx {
+    position: absolute;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.500);
+    color: white;
+    text-align: center;
+    bottom: 10px;
+    width: 100%;
+    font-weight: bold;
+}
