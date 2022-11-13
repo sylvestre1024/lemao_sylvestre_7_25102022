@@ -1,0 +1,36 @@
+.container_errors {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.errors_number {
+    font-weight: 700;
+    font-size: 288px;
+    text-align: center;
+    color: #FF6060;
+    margin-top: 56px;
+}
+
+.errors_text {
+    text-align: center;
+    color: #FF6060;
+    font-weight: 500;
+    font-size: 36px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 30px;
+
+}
+
+.text_return {
+    text-align: center;
+    color: #FF6060;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 182px;
+    margin-bottom: 159px;
+    text-decoration: underline;
+}
