@@ -1,0 +1,23 @@
+nav a {
+    color: #FF6060;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    margin: 0;
+    text-decoration-line: none;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    padding: 57px 0px 0px 57px;
+}
+
+nav ul li:hover {
+    text-decoration-line: underline;
+}
