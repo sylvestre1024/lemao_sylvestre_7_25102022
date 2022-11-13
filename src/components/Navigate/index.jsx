@@ -1,17 +1,21 @@
+import React from 'react'
 import { NavLink } from "react-router-dom";
-import styled from 'styled-components'
-import colors from '../../../utils/style/colors'
+import LogoRed from '../../images/LogoRed.svg'
+import './styles.css'
+
 
 function Navigate() {
   return (
-    <div><b>Navigation : </b>
-      <NavLink to="/">
-        Home
-      </NavLink><b>./.</b>
-      <NavLink to="/about">
-        About
-      </NavLink>
-    </div>
+            <nav>
+                <ul className='menu'>
+                    <NavLink to="/">
+                        <li>Accueil</li>
+                    </NavLink>
+                    <NavLink to="About">
+                        <li>A Propos</li>
+                    </NavLink>
+                </ul>
+            </nav>
   )
 }
 
