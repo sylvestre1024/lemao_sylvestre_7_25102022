@@ -1,0 +1,53 @@
+.container_card {
+    margin-top: 43px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 1240px;
+    max-width: 95%;
+    background: #F7F7F7;
+    border-radius: 25px;
+}
+
+.box_card {
+    list-style-type: none;
+    padding: 56px 50px 56px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 100%;
+}
+
+.card-cover {
+    background-size: cover;
+    border-radius: 10px;
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+}
+
+.product-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.title-card {
+    position: absolute;
+    z-index: 20;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    display: flex;
+    align-items: flex-end;
+    margin: 268px 20px 20px 20px;
+    color: #FFFFFF;
+    cursor: pointer;
+}

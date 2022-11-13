@@ -1,9 +1,6 @@
 import { useParams } from "react-router-dom"
-import styled from 'styled-components'
-import colors from '../../utils/style/colors'
-import { StyledLink } from '../../utils/style/Atoms'
-import Slideshow from "../../components/Layout/Slideshow"
-import Collapse from '../../components/Layout/Collapse'
+import Slideshow from "../../components/Slideshow"
+import Collapse from '../../components/Collapse'
 const productData = require("./logements.json")
 
 /*

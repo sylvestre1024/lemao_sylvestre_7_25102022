@@ -1,8 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
-import colors from '../../utils/style/colors'
-import HeadBand from '../../components/Layout/HeadBand'
-import Collapse from '../../components/Layout/Collapse'
+import Collapse from '../../components/Collapse'
 
 const aboutData =[
     {
@@ -30,10 +27,6 @@ const aboutData =[
 function About() {
   return (
     <div>
-      <HeadBand 
-        text="pas de texte de la page About"  //TODO a remplacer par un import
-        picture="Chemin de l'image de la page About"  //TODO a remplacer par un import
-      />
       <div>&#10097;Page About</div>
       <div>
           {aboutData.map((section) => (

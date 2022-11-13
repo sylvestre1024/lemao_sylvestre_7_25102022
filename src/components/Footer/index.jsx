@@ -1,5 +1,4 @@
-import styled from 'styled-components'
-import colors from '../../../utils/style/colors'
+import React from 'react'
 
 function Footer({picture}) {
   picture="Chemin du logo du Footer" // a remplacer par un import
