@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
-import Header from '../../components/Header'
 import Errors from '../Errors'
 import Carousel from '../../components/Carousel'
 import Avatar from '../../components/Avatar'
@@ -13,6 +12,7 @@ function Product({ data }) {
     const [logement, setLogement] = useState({ tags: [], equipments: [], pictures: [], rating: '', host: { 'name': '', 'picture': '' } })
     const { id } = useParams()
     //console.log('id provenant du paramètre url :' + id)
+    //console.log(data)
     
     useEffect(() => {
       data.map((house) => {

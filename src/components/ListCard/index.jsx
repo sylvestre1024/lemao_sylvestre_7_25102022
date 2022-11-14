@@ -1,7 +1,6 @@
 import React from 'react'
 import Card from '../../components/Card'
 import './styles.css'
-import useFetch from "../../utils/hooks/useFetch";
 
 function ListCard({ data }) {
     const loadedData = data

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -9,12 +9,12 @@ import Footer from './components/Footer'
 import useFetch from ".//utils/hooks/useFetch";
 
 const App = () => {
-  const {datas, isLoading} = useFetch("http://localhost:3000/logements.json")
+  const { datas } = useFetch("http://localhost:3000/logements.json")
   const loadedData = datas
   //console.log(loadedData)
- return (
-   <Router>
-     <Header />
+  return (
+    <Router>
+      <Header />
       <Routes>
         <Route path="/" element={<Home data={loadedData} />} />
         <Route path="About" element={<About />} />
