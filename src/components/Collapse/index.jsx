@@ -12,7 +12,7 @@ function Collapse(props) {
 
     // utilisation paramètrée du composant pour des tailles css differentes
     const { size } = props
-    const className = size === 'large' ? 'about__page' : 'logement-page'
+    const className = size === 'large' ? 'about__page' : 'product__page'
 
 
     const togglecollapse = () => {

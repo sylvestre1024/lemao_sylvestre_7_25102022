@@ -3,12 +3,12 @@ import Header from '../../components/Header'
 import Banner from '../../components/Banner'
 import ListCard from '../../components/ListCard'
 
-function Home() {
+function Home({ data }) {
     return (
         <div>
             <Header />
             <Banner />
-            <ListCard />
+            <ListCard data={data}/>
         </div>
     )
 }

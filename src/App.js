@@ -5,18 +5,18 @@ import About from './pages/About'
 import Product from './pages/Product'
 import Errors from './pages/Errors'
 import Footer from './components/Footer'
-import data from './api/logements.json'
-
-/*TODO gérer les erreurs en cas de mauvaise demande id de produit*/
+import useFetch from ".//utils/hooks/useFetch";
 
 const App = () => {
-  // console.log(data);
+  const {datas, isLoading} = useFetch("http://localhost:3000/logements.json")
+  const loadedData = datas
+  //console.log(loadedData)
  return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home data={loadedData} />} />
         <Route path="About" element={<About />} />
-        <Route path="/product/:id" element={<Product data={data} />} />
+        <Route path="/product/:id" element={<Product data={loadedData} />} />
         <Route path="*" element={<Errors />} />
       </Routes>
       <Footer />

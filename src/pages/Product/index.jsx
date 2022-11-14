@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom"
-
 import Header from '../../components/Header'
 import Errors from '../Errors'
 import Carousel from '../../components/Carousel'
-
+import Avatar from '../../components/Avatar'
+import { ReactComponent as Stars } from '../../images/star_Grey.svg'
+import Tag from '../../components/Tag'
 import Collapse from '../../components/Collapse'
 import './styles.css'
 
 function Product({ data }) {
     const [logement, setLogement] = useState({ tags: [], equipments: [], pictures: [], rating: '', host: { 'name': '', 'picture': '' } })
     const { id } = useParams()
-    console.log('id provenant du paramètre url :' + id)
+    //console.log('id provenant du paramètre url :' + id)
     
     useEffect(() => {
       data.map((house) => {
@@ -24,10 +25,10 @@ function Product({ data }) {
 
     // Page 404 cas id est non valide
     if (!logement.id) {
-      //return < Error />
-      console.log('id non trouvé déclenche une erreur 404')
+      return < Errors />
+      //console.log('id non trouvé déclenche une erreur 404')
     } else {
-      console.log('Yes, id trouvé en correspondance au paramètre URL !')
+      //console.log('Yes, id trouvé en correspondance au paramètre URL !')
     }
 
     return (
@@ -36,8 +37,30 @@ function Product({ data }) {
             <div className='carousel-logement'>
                 <Carousel img={logement.pictures} />
             </div>
-            {/*}
             <section className='section-global'>
+
+                <div className='container-presentation'>
+                    <div className='container-header'>
+                        <h2 className='title'>{logement.title}</h2>
+                        <h3 className='location'>{logement.location}</h3>
+
+                        <div className="container-tag">
+                            {logement.tags.map((tag) => <Tag content={tag} key={tag} />)}
+                        </div>
+                    </div>
+
+                    <div className='container-subheader'>
+                        <div>
+                            <Avatar name={logement.host.name} picture={logement.host.picture} />
+                        </div>
+
+                        <div>
+                            {[1, 2, 3, 4, 5].map(star =>
+                                <Stars key={star} className={star <= logement.rating ? "star" : null} />
+                            )}
+                        </div>
+                    </div>
+                </div>          
                   <div className='collapse-container'>
                     <Collapse
                         title="Description"
@@ -54,7 +77,6 @@ function Product({ data }) {
                     />
                   </div>
             </section>
-            */}
           </main>
     )
 }

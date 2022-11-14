@@ -1,3 +1,11 @@
+.gradient-overlay {
+    border-radius: 10px;
+    width: 340px;
+    height: 340px;
+    background-size: cover;
+    cursor: pointer;
+}
+
 .card-cover {
     background-size: cover;
     border-radius: 10px;
@@ -29,3 +37,4 @@
     color: #FFFFFF;
     cursor: pointer;
 }
+

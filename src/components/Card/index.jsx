@@ -6,7 +6,7 @@ const Card = ({ product }) => {
     return (
         <NavLink to={`Product/${product.id}`}>
             <li className='product-item'>
-                <div>
+                <div className='gradient-overlay'>
                     <img className='card-cover' src={product.cover} alt={"logement" + product.title} />
                 </div>
                 <h2 className='title-card'>
