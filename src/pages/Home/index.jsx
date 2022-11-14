@@ -5,8 +5,7 @@ import ListCard from '../../components/ListCard'
 
 function Home({ data }) {
     return (
-        <div>
-            
+        <div> 
             <Banner />
             <ListCard data={data}/>
         </div>
