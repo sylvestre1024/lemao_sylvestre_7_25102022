@@ -20,10 +20,29 @@
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    line-height: 142.6%;
+    line-height: 140%;
     display: flex;
     align-items: flex-end;
     text-align: right;
     color: #FF6060;
     margin-right: 10px;
+}
+
+/* Responsive design */
+
+@media (max-width: 478px) {
+    .avatar-container {
+        margin-top: 18px;
+        margin-bottom: 16px;
+    }
+
+    .avatar-main img {
+        width: 32px;
+        height: 32px
+    }
+
+    .avatar-name {
+        font-size: 12px;
+        margin: 0;
+    }
 }

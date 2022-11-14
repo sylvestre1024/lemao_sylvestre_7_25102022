@@ -42,3 +42,22 @@
     width: 100%;
     font-weight: bold;
 }
+
+/* Responsive design */
+
+@media (max-width: 672px) {
+    .carousel {
+        width: 90%;
+    }
+}
+
+@media (max-width: 478px) {
+    .carousel-idx {
+        display: none;
+    }
+
+    .chevron {
+        width: 20px !important;
+    }
+
+}

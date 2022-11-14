@@ -19,3 +19,39 @@
     gap: 50px;
     max-width: 100%;
 }
+
+/* Responsive design */
+
+@media screen and (max-width: 1305px) {
+    .box_card {
+        justify-content: center;
+        gap: 6%;
+    }
+}
+
+/*==========================================*/
+
+@media screen and (max-width: 983px) {
+
+    .box_card {
+        padding: 50px 0px 50px 0px;
+        margin-left: 5%;
+        margin-right: 5%;
+        gap: 20px;
+    }
+
+}
+
+/*==========================================*/
+
+@media screen and (max-width: 672px) {
+    .container_card {
+        background: none;
+        margin-top: 22px;
+    }
+
+    .box_card {
+        padding: 0px 0px 40px 0px;
+    }
+    
+}

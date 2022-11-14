@@ -8,7 +8,7 @@
 
 .errors_number {
     font-weight: 700;
-    font-size: 288px;
+    font-size: 280px;
     text-align: center;
     color: #FF6060;
     margin-top: 56px;
@@ -31,6 +31,28 @@
     font-weight: 500;
     font-size: 18px;
     margin-top: 182px;
-    margin-bottom: 159px;
+    margin-bottom: 160px;
     text-decoration: underline;
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 748px) {
+
+    .error_number {
+        font-size: 96px;
+        margin-top: 195px;
+    }
+
+    .error_text {
+        font-size: 18px;
+        margin-top: 4px;
+        line-height: 140%;
+    }
+
+    .text_return {
+        font-size: 14px;
+        margin-top: 140px;
+        margin-bottom: 230px;
+    }
 }

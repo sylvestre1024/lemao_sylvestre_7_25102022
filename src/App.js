@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Product from './pages/Product'
 import Errors from './pages/Errors'
+import Header from './components/Header'
 import Footer from './components/Footer'
 import useFetch from ".//utils/hooks/useFetch";
 
@@ -12,7 +13,8 @@ const App = () => {
   const loadedData = datas
   //console.log(loadedData)
  return (
-    <Router>
+   <Router>
+     <Header />
       <Routes>
         <Route path="/" element={<Home data={loadedData} />} />
         <Route path="About" element={<About />} />

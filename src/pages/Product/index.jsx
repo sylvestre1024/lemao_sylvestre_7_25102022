@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
 import Header from '../../components/Header'
 import Errors from '../Errors'
 import Carousel from '../../components/Carousel'
@@ -25,15 +25,15 @@ function Product({ data }) {
 
     // Page 404 cas id est non valide
     if (!logement.id) {
-      return < Errors />
-      //console.log('id non trouvé déclenche une erreur 404')
-    } else {
-      //console.log('Yes, id trouvé en correspondance au paramètre URL !')
+        return < Errors />
+        //console.log(logement.id)
+        //console.log('id non trouvé déclenche une erreur 404')
     }
+    
 
     return (
           <main className='logement'>
-            <Header />
+            
             <div className='carousel-logement'>
                 <Carousel img={logement.pictures} />
             </div>
@@ -71,7 +71,7 @@ function Product({ data }) {
                         content={
                             <ul>
                                 {logement.equipments.map((equipment) =>
-                                    <li key={equipment}>{equipment}</li>)}
+                                <li key={equipment}>{equipment}</li>)}
                             </ul>
                         }
                     />

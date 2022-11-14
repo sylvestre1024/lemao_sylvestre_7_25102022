@@ -11,3 +11,29 @@
     margin-top: 40px;
     padding: 0;
 }
+
+
+/* Responsive design */
+
+@media screen and (max-width: 672px) {
+    .Header {
+        max-width: 90%;
+    }
+
+    .logo {
+        margin-top: 20px;
+        width: 145px;
+        height: 47px;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    .Header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}
