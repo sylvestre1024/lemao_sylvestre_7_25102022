@@ -25,3 +25,46 @@
     margin-left: 5%;
     margin-right: 5%;
 }
+
+/* Responsive design */
+
+@media (max-width: 672px) {
+    .banner-img {
+        max-width: 90%;
+        margin-top: 17px;
+        border-radius: 10px;
+    }
+
+    .global-about main {
+        max-width: 100%;
+    }
+
+    .container-about {
+        max-width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+
+/*********************************************************************************/
+@media (max-width: 478px) {
+    .container-about {
+        margin-top: 19px;
+        margin-bottom: 168px;
+    }
+}
+
+/*********************************************************************************/
+@media (max-width: 375px) {
+    .banner-img {
+        content: url("../../images/MinAbout.webp");
+    }
+}
+
+/*********************************************************************************/
+@media (max-width: 350px) {
+
+    .banner-img {
+        margin-top: 50px;
+    }
+}

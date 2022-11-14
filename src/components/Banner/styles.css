@@ -28,3 +28,47 @@
     left: 7%;
     right: 7%;
 }
+
+/* Responsive design */
+
+@media screen and (max-width: 672px) {
+
+    .banner {
+        margin-top: 16px;
+    }
+
+    .background-banner {
+        max-width: 90%;
+        height: 110px;
+        border-radius: 10px;
+    }
+
+    .title-banner {
+        text-align: left;
+        left: 9.6%;
+        right: 30%;
+        top: 114px;
+        font-size: 24px;
+        line-height: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .background-banner {
+        content: url("../../images/MinHome.webp");
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .background-banner {
+        margin-top: 35px;
+    }
+
+    .background-opacity {
+        margin-top: 35px;
+    }
+
+    .title-banner {
+        margin-top: 78px;
+    }
+}

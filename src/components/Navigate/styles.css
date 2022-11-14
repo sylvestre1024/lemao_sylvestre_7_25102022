@@ -21,3 +21,38 @@ nav ul li {
 nav ul li:hover {
     text-decoration-line: underline;
 }
+
+/* Responsive design */
+
+@media screen and (max-width: 672px) {
+
+    .menu {
+        padding: 0;
+    }
+
+    nav a {
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    nav ul li {
+        padding: 38px 0px 0px 15px;
+    }
+
+    .container_card {
+        background: none;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav ul li {
+        padding: 40px 0px 0px 15px;
+        margin-right: 2%;
+    }
+}

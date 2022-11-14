@@ -38,3 +38,69 @@
     cursor: pointer;
 }
 
+/* Responsive design */
+
+@media screen and (max-width: 1305px) {
+
+    .gradient-overlay {
+        width: 100%;
+        height: 255px;
+        margin-bottom: 45px;
+    }
+
+    .card-cover {
+        max-width: 365px;
+        width: 100%;
+        height: 255px;
+        margin-bottom: 30px;
+    }
+
+    .title-card {
+        margin: 46.73% 5.88% 5.88% 5.88%;
+    }
+}
+
+/*==========================================*/
+
+@media screen and (max-width: 983px) {
+
+    .gradient-overlay {
+        margin-bottom: 0px;
+    }
+
+    .card-cover {
+        margin-bottom: 0px;
+    }
+
+    .title-card {
+        margin: 53.73% 5.88% 5.88% 5.88%;
+    }
+}
+
+/*==========================================*/
+
+@media screen and (max-width: 848px) {
+
+    .gradient-overlay {
+        height: 190px;
+    }
+
+    .card-cover {
+        max-width: 285px;
+        height: 190px;
+    }
+}
+
+/*==========================================*/
+
+@media screen and (max-width: 672px) {
+
+    .gradient-overlay {
+        height: 255px;
+    }
+
+    .card-cover {
+        max-width: 383px;
+        height: 255px;
+    }
+}

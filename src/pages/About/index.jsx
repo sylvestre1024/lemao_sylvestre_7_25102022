@@ -30,7 +30,7 @@ const aboutData =[
 function About() {
   return (
     <div>
-      <Header />
+      
       <div className='global-about'>
         <img src={BackgroundAbout} alt='bannière paysage' className='banner-img' />
         <main>

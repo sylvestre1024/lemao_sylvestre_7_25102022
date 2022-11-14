@@ -19,3 +19,31 @@
     font-weight: 500;
     font-size: 14px;
 }
+
+/*  Responsive design */
+
+@media (max-width: 672px) {
+    .tag {
+        border-radius: 5px;
+        min-width: 75px;
+        height: 18px;
+        padding: 0 5px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+
+    .tag-content {
+        font-size: 12px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        width: auto;
+    }
+}
+
+@media (max-width: 478px) {
+    .tag-content {
+        width: 85px;
+        font-size: 10px;
+    }
+}
