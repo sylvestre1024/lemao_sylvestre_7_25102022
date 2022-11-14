@@ -1,17 +1,21 @@
 import React from 'react'
-import ProductList from '../../api/logements.json'
 import Card from '../../components/Card'
-import '../../components/Card/styles.css'
+import './styles.css'
+import useFetch from "../../utils/hooks/useFetch";
 
-function ListCard() {
+function ListCard({ data }) {
+    const loadedData = data
+    //console.log(data)
     return (
         <div className='container_card'>
+
             <ul className='box_card'>
-                {ProductList
+                {loadedData
                     .map((product, index) => (
                         <Card key={index} product={product} />
                     ))}
-            </ul>
+                </ul>
+
         </div>
     )
 }
