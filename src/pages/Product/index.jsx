@@ -32,8 +32,7 @@ function Product({ data }) {
     
 
     return (
-          <main className='logement'>
-            
+          <main className='logement'>   
             <div className='carousel-logement'>
                 <Carousel img={logement.pictures} />
             </div>
