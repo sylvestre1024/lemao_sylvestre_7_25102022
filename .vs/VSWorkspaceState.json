@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\images",
+    "\\src\\pages",
+    "\\src\\styles",
+    "\\src\\utils",
+    "\\src\\utils\\hooks"
   ],
-  "SelectedNode": "\\C:\\Users\\sylve\\Source\\Repos\\lemao_sylvestre_7_25102022_nov",
   "PreviewInSolutionExplorer": false
 }
